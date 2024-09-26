@@ -14,16 +14,17 @@ Each item should have a variable that holds its current stock value and a variab
 */
 
 //Soda
+
 Console.WriteLine("How many sodas have been sold today? 100 are in stock");
 int sodaStock = 100;
 int sodaSold = int.Parse(Console.ReadLine());
+int sodaRemaining = sodaStock - sodaSold;
 if (sodaSold > 100)
 {
     sodaSold = 0;
     Console.WriteLine("The value of Sodas sold is higher than the initial stock. Stock not adjusted.");
 } else
 {
-    int sodaRemaining = sodaStock - sodaSold;
     Console.WriteLine("There are " + sodaRemaining + " bottles of soda left");
 }
 
@@ -33,58 +34,54 @@ if (sodaSold > 100)
 Console.WriteLine("How many chips have been sold today? 40 in stock");
 int chipStock = 40;
 int chipSold = int.Parse(Console.ReadLine());
+int chipRemaining = chipStock - chipSold;
 if (chipSold > 40)
 {
     chipSold = 0;
     Console.WriteLine("The value of chips sold is higher than the initial stock. Stock not adjusted");
 } else {
-    int chipRemaining = chipStock - chipSold;
     Console.WriteLine("There are " + chipRemaining + " bags of chips left");
 }
 
 //Candy
+
 Console.WriteLine("How many bags of candy have been sold today? 60 in stock");
-int candyStock = 40;
+int candyStock = 60;
 int candySold = int.Parse(Console.ReadLine());
-if (candySold > 40)
+int candyRemaining = candyStock - candySold;
+if (candySold > 60)
 {
     candySold = 0;
     Console.WriteLine("The value of bags of candy sold is higher than the initial stock. Stock not adjusted.");
 }
 else
 {
-    int candyRemaining = candyStock - candySold;
-    Console.WriteLine("There are " + candyRemaining + " bags of chips left");
+    Console.WriteLine("There are " + candyRemaining + " bags of candy left");
 }
 
-/*
+//Restock notification loops
+Console.WriteLine("Thank you for filling out the values. Here's what needs to be restocked:");
+
+
 if (sodaRemaining <= 40)
 {
-    Console.WriteLine("There are " + sodaRemaining +" bottles of soda in stock. The soda needs to be restocked.");
+    Console.WriteLine("There are " + sodaRemaining + " bottles of soda in stock. The soda needs to be restocked.");
 } else
 {
-    Console.WriteLine("There are " + sodaRemaining + " bottles of soda in stock. The soda does not need to be restocked");
+    Console.WriteLine("There are " + sodaRemaining + " bottles of soda in stock. The soda does not need to be restocked.");
 }
 if (chipRemaining <= 20)
 {
-    Console.WriteLine("There are " + chipRemaining + " bags of chips in stock. The chips needs to be restocked.");
+    Console.WriteLine("There are " + chipRemaining + " bags of chips in stock. The chips need to be restocked.");
 }
 else
 {
-    Console.WriteLine("There are " + chipRemaining + " bags of chips in stock. The chips does not need to be restocked");
+    Console.WriteLine("There are " + chipRemaining + " bags of chips in stock. The chips do not need to be restocked.");
 }
 if (candyRemaining <= 40)
 {
-    Console.WriteLine("There are " + candyRemaining +" bags of candy in stock. The candy needs to be restocked.");
+    Console.WriteLine("There are " + candyRemaining + " bags of candy in stock. The candy needs to be restocked.");
 } else
 {
-    Console.WriteLine("There are " + candyRemaining + " bags of candy in stock. The candy does not need to be restocked");
+    Console.WriteLine("There are " + candyRemaining + " bags of candy in stock. The candy does not need to be restocked.");
 }
-if (candyRemaining <= 40)
-{
-    Console.WriteLine("There are " + candyRemaining +" bags of candy in stock. The candy needs to be restocked.");
-} else
-{
-    Console.WriteLine("There are " + candyRemaining + " bags of candy in stock. The candy does not need to be restocked");
-}
-*/
